@@ -1,4 +1,5 @@
 # Spelling Bee Solver
+![Screen Shot 2023-08-10 at 11 50 34 AM](https://github.com/sevebarr/seve-demo-1/assets/27875899/9551a855-c259-492f-a1f4-72d189f485a7)
 
 This code aims to build out an algorithm to solve the NYTimes Spelling Bee. The front end mimics the NYTimes Spelling Bee Game and returns a list of words that 
 
