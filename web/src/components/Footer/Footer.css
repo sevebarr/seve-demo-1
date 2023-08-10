@@ -1,0 +1,30 @@
+.Footer {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    font-size: large;
+    position: absolute;
+    bottom: 0;
+    background: white;
+    border: 1px solid red;
+
+    bottom: 0;
+}
+
+.FooterItem {
+    padding: 10px;
+    transition: 0.3s;
+    width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.FooterItem:hover {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.05);
+
+}

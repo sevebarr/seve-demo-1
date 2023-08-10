@@ -1,0 +1,74 @@
+.NavigationBar {
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    ;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    font-size: medium;
+    z-index: 1;
+    background: white;
+}
+
+.NavigationBar a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.NavItems {
+    display: flex;
+    width: 100%;
+    align-items: space-around;
+    justify-content: space-around;
+}
+
+.NavItem {
+    padding: 10px;
+    transition: 0.3s;
+    width: 15vw
+}
+
+.NavItem:hover {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.05);
+
+}
+
+/* NAVIGATION DROPDOWN MENU */
+
+.NavDrop {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+
+}
+
+.NavDrop:hover {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+
+.NavDrop .NavDropItem {
+    display: none;
+    padding: 10px;
+}
+
+.NavDropItem:hover {
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.NavDrop:hover .NavDropItem {
+    display: block;
+    border: 1px solid red;
+    background: white;
+}
+
+@media (max-width: 480px) {
+    .NavigationBar {
+        font-size: small;
+    }
+}

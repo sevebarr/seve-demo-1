@@ -1,0 +1,221 @@
+* {
+  font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+:root {
+  --prime-bg: white;
+  --accent-bg: rgb(239, 239, 239);
+  --sec-bg: rgb(239, 239, 239);
+  --prime-color: #rgb(255, 225, 86);
+  --sec-color: #136F63;
+  --prime-text: #041B15;
+  --sec-text: #E4DEE4;
+  --accent: #22AAA1;
+  --letters-width: 400px
+}
+
+@media (max-width: 480px) {
+  :root {
+    --letters-width: 300px;
+  }
+}
+
+.SpellingBeeSolver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  margin: 50px 0;
+}
+
+.SpellingBeeLogo {
+  max-width: 250px;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  border: solid green 1px;
+  display: flex
+}
+
+.Letters {
+  height: var(--letters-width);
+  min-width: var(--letters-width);
+  max-width: var(--letters-width);
+  margin: 0px auto 20px;
+  display: flex;
+  overflow: auto;
+  position: relative;
+  border: 3px solid var(--accent);
+  border-radius: 10%;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.LetterInput {
+  background: var(--sec-bg);
+  color: var(--sec-text);
+
+  padding: calc(var(--letters-width)*.02);
+  margin: calc(var(--letters-width)*.02);
+  width: calc(var(--letters-width)*.2);
+  height: calc(var(--letters-width)*.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: 0.3s;
+  /* border: 3px solid pink; */
+
+}
+
+
+.Input {
+  width: 100%;
+  height: 1.5em;
+  font-size: 30px;
+  display: flex;
+  background: var(--sec-bg);
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Input::placeholder {
+  color: var(--sec-text);
+}
+
+.Input:focus {
+  outline: none;
+}
+
+.LetterInput:hover {
+  transition: 0.2s;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center .Input {
+  background: rgb(247, 218, 33);
+}
+
+.center .LetterInput {
+  background: rgb(247, 218, 33);
+}
+
+.center .Input::placeholder {
+  color: rgb(239, 239, 239);
+}
+
+.center {
+  /* border: 3px solid pink; */
+  position: absolute;
+  border-radius: 100%;
+  top: calc(var(--letters-width)*.35);
+  left: calc(var(--letters-width)*.35);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.top {
+  /* border: 3px solid pink; */
+  position: absolute;
+  top: calc(var(--letters-width)*.05);
+  left: calc(var(--letters-width)*.35);
+}
+
+.top-left {
+  /* border: 3px solid pink; */
+  position: absolute;
+  top: calc(var(--letters-width)*.2);
+  left: calc(var(--letters-width)*.05);
+}
+
+.top-right {
+  /* border: 3px solid pink; */
+  position: absolute;
+  top: calc(var(--letters-width)*.2);
+  left: calc(var(--letters-width)*.65);
+}
+
+.bottom {
+  /* border: 3px solid pink; */
+  position: absolute;
+  bottom: calc(var(--letters-width)*.05);
+  left: calc(var(--letters-width)*.35);
+}
+
+.bottom-left {
+  /* border: 3px solid pink; */
+  position: absolute;
+  bottom: calc(var(--letters-width)*.2);
+  left: calc(var(--letters-width)*.05);
+}
+
+.bottom-right {
+  /* border: 3px solid pink; */
+  position: absolute;
+  bottom: calc(var(--letters-width)*.2);
+  left: calc(var(--letters-width)*.65);
+}
+
+.Error {
+  color: red;
+  font-size: small;
+}
+
+button {
+  background: var(--prime-color);
+  color: var(--accent);
+  border: var(--accent) 3px solid;
+  height: 50px;
+  width: 50vw;
+  max-width: 300px;
+  margin: 10px;
+  font-size: 20px;
+  padding: auto;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 800;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--black);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 80vw;
+    font-size: 14px;
+    height: 35px;
+  }
+}
+
+.hide-element {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show-element {
+  opacity: 1;
+}
+
+.Answers {
+  display: flex;
+  justify-content: center;
+  width: var(--letters-width);
+}
+
+.Answer .ModalShowButton {
+  width: calc(var(--letters-width) / 2 - 50px);
+  font-size: x-small;
+  height: 50px;
+}
